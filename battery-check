@@ -1,0 +1,12 @@
+#!/bin/bash
+low=40
+high=80
+perc=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/percentage/{print $2}')
+state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/state/{ print $2 }')
+perc="${perc//%}"
+if [[ perc -lt $low && $state = "discharging" ]]; then
+	XDG_RUNTIME_DIR="/run/user/1000" notify-send "Battery is low" "$perc%, charge up a little"
+fi
+if [[ perc -gt $high && $state = "charging" ]]; then
+	XDG_RUNTIME_DIR="/run/user/1000" notify-send "Battery is high" "$perc%, withdrawal will be tuff"
+fi
