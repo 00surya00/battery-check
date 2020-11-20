@@ -18,9 +18,9 @@ as to keep the charge between the set `$low` and `$high`)
  * Edit the `battery-check` change the values of
       * `high` maximum limit while charging
       * `low` minimum limit while discharging
- * Copy the `battery-check` script to /usr/bin make sure its executable
+ * Copy the `battery-check` script to `<any-path-you-may-like>` make sure its executable
  * Add a crontab using `crontab -e`
- * Add the following `*/5 * * * * /usr/bin/battery-check` to the crontab and save
+ * Add the following `*/5 * * * * <any-path-you-may-like>` to the crontab and save
 
 ## Authors
 
@@ -28,7 +28,7 @@ as to keep the charge between the set `$low` and `$high`)
 
 ## License
 
-This project is licensed under the Apache 2 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
