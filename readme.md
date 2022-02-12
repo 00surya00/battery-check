@@ -2,9 +2,9 @@
 
 Sends a notification when battery is below and above the set limit.
 (to reduce charging to 100% each time hence reducing the battery cycles in wear,
-as to keep the charge between the set `$low` and `$high`)
+as to keep the charge between the set `$low` and `$high`; `$high` is useful only if you could turn on <ins>conservation mode</ins> in your laptop)
 
-### Prerequisites
+## Prerequisites
  * `bash`
  * `upower` module
  * `x11`
@@ -13,7 +13,7 @@ as to keep the charge between the set `$low` and `$high`)
  * `crontab`
  All of these are available by default on most of ubuntu based distros
 
-### Installing
+## Installing
 
  * Edit the `battery-check` change the values of
       * `high` maximum limit while charging
